@@ -1,0 +1,29 @@
+{
+    "name": "tun9",
+    "mode": "client",
+    "group": "caonima",
+    "net": "10.17",
+    "id": "16.1",
+    "gateway": "1.1",
+    "forwarders": [
+        "1.1",
+        "1.2"
+    ],
+    "port": 0,
+    "mtu": 1408,
+    "secret_file": "secrets.txt",
+    "local_routes": [
+        "114.114.114.114",
+        "10.0.0.0/8",
+        "172.16.0.0/12",
+        "192.168.0.0/16"
+    ],
+    "chnroute": {
+        "table": "default",
+        "gateway": "default",
+        "data": "china_ip_list.txt"
+    },
+    "post_up_cmds": [],
+    "post_down_cmds": [],
+    "log_level": "info"
+}
