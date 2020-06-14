@@ -1,5 +1,4 @@
 {
-    "name": "tun9",
     "mode": "client",
     "group": "caonima",
     "net": "10.17",
@@ -9,6 +8,7 @@
         "1.1",
         "1.2"
     ],
+    "inactive_downward_static": true,
     "port": 0,
     "mtu": 1408,
     "secret_file": "secrets.txt",

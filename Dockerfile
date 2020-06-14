@@ -9,14 +9,13 @@ COPY sources.list /etc/apt/sources.list
 RUN apt-get update --fix-missing && \
     apt-get -y --fix-missing install \
     iproute2 iptables tcpdump iputils-ping dnsutils curl unzip vim \
-    python3 python3-pip dnsmasq squid shadowsocks-libev && \
+    golang-go dnsmasq squid shadowsocks-libev && \
     apt-get clean
-
-COPY pip.conf /root/.pip/
-RUN pip3 install --no-cache-dir pycrypto
 
 COPY download-code.sh /tmp/download-code.sh
 RUN /tmp/download-code.sh
+
+RUN cd /tmp/alpaca-go/ && go build && mv alpaca-go /usr/local/bin/ && rm -rf /tmp/*
 
 COPY config.json /usr/local/etc/alpaca-tunnel.d/
 COPY secrets.txt /usr/local/etc/alpaca-tunnel.d/
