@@ -19,4 +19,4 @@ dnsmasq --conf-file=/etc/dnsmasq.conf
 
 ss-server -s 0.0.0.0 -p 1080 -m aes-256-cfb -d 8.8.8.8 -k $PASSWORD > /dev/null &
 
-exec /usr/local/bin/alpaca-go -c /usr/local/etc/alpaca-tunnel.d/config.json
+exec /usr/local/bin/alpaca-go
