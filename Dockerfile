@@ -9,7 +9,7 @@ COPY sources.list /etc/apt/sources.list
 RUN apt-get update --fix-missing && \
     apt-get -y --fix-missing install \
     iproute2 iptables tcpdump iputils-ping dnsutils curl unzip vim \
-    golang-go dnsmasq squid shadowsocks-libev && \
+    git golang-go dnsmasq squid shadowsocks-libev && \
     apt-get clean
 
 COPY download-code.sh /tmp/download-code.sh
