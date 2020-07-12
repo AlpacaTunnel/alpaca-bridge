@@ -15,7 +15,7 @@ echo "nameserver 8.8.8.8" > /etc/resolv.conf
 
 dnsmasq --conf-file=/etc/dnsmasq.conf
 
-# squid
+squid
 
 ss-server -s 0.0.0.0 -p 1080 -m aes-256-cfb -d 8.8.8.8 -k $PASSWORD > /dev/null &
 

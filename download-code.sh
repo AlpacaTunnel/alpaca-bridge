@@ -33,3 +33,5 @@ download https://github.com/golang/sys/archive/master.zip /root/go/src/golang.or
 download https://github.com/golang/crypto/archive/master.zip /root/go/src/golang.org/x/crypto
 
 download https://github.com/AlpacaTunnel/alpaca-go/archive/master.zip /tmp/alpaca-go
+
+go get -v github.com/vishvananda/netlink
