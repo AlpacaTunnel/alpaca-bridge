@@ -1,13 +1,13 @@
-# alpaca-bridge
+# alpaca-container
 
-Shadowsocks/Squid via alpaca-py tunnel.
+Shadowsocks/Squid via alpaca-tunnel.
 
 ## Usage
 
 There 2 files need to change:
 
-- `config.json`: configuration of alpaca-py.
-- `secrets.txt`: alpaca-py peers and PSKs.
+- `config.json`: configuration of alpaca-tunnel.
+- `secrets.txt`: alpaca-tunnel peers and PSKs.
 
 You can edit these 2 files, and build into the Docker image, or you can mount them from Docker host.
 

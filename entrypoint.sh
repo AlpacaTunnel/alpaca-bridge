@@ -17,6 +17,6 @@ dnsmasq --conf-file=/etc/dnsmasq.conf
 
 squid
 
-ss-server -s 0.0.0.0 -p 1080 -m aes-256-cfb -d 8.8.8.8 -k $PASSWORD > /dev/null &
+ss-server -s 0.0.0.0 -p 1080 -m chacha20-ietf-poly1305 -d 8.8.8.8 -k $PASSWORD > /dev/null &
 
 exec /usr/local/bin/alpaca-go
